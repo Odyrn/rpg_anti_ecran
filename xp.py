@@ -24,11 +24,11 @@ def gain_quest(xp_total: int, xp_add: int) -> int:
     """Ajoute l'expérience gagnée pendant une quête et renvoie le nouvel XP total."""
     return xp_total + xp_add
 
-def xp_pour_rang(rang : str)-> int :
-    """Fonction renvoillant la quantité d'experiance obtenue pour le rang de quete entre en parametre"""
-    for i in table_rangs :
-        if rang == table_rangs["classification"] :
-            return table_rangs["xp"]
+def xp_pour_rang(rang: str) -> int:
+    """Renvoie la quantité d'expérience obtenue pour le rang de quête donné en paramètre."""
+    for ligne in table_rangs:
+        if ligne["classification"] == rang:
+            return ligne["xp"]
     return 0
 
 
